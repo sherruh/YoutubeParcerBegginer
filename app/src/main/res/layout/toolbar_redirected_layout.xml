@@ -7,9 +7,18 @@
     android:background="?attr/colorPrimary"
     android:theme="@style/AppTheme"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    android:id="@+id/toolBar"
-    app:titleTextColor="@color/colorRed"
+    android:id="@+id/toolBar_redirected"
+    android:layoutDirection="rtl"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Playlist"
+        android:textSize="20sp"
+        android:textColor="@color/colorRed"
+
+        android:gravity = "center"
+        android:id="@+id/toolbar_title"/>
 
 </androidx.appcompat.widget.Toolbar>

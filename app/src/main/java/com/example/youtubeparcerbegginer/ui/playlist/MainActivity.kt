@@ -1,5 +1,6 @@
 package com.example.youtubeparcerbegginer.ui.playlist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -12,6 +13,7 @@ import com.example.youtubeparcerbegginer.R
 import com.example.youtubeparcerbegginer.adapter.PlaylistAdapter
 import com.example.youtubeparcerbegginer.model.ItemsItem
 import com.example.youtubeparcerbegginer.model.PlaylistModel
+import com.example.youtubeparcerbegginer.ui.detail_playlist.DetailPlaylistActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,12 +48,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAdapter() {
         recycler.layoutManager = LinearLayoutManager(this)
-        adapter = PlaylistAdapter { itemsItem: ItemsItem -> onClickItem(itemsItem) }
+        adapter = PlaylistAdapter { item: ItemsItem -> onClickItem(item) }
         recycler.adapter = adapter
     }
 
-    private fun onClickItem(itemsItem: ItemsItem) {
-
+    private fun onClickItem(item: ItemsItem) {
+        DetailPlaylistActivity.startActivity(item, this)
     }
 
     private fun initViewModel() {
