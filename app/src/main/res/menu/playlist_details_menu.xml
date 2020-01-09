@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_back"
-        android:icon="@drawable/ic_button_back"
+        android:icon="@drawable/ic_keyboard_arrow_left"
         app:showAsAction="ifRoom"
-        android:actionLayout="@layout/item_big_menu_layout"
         android:title="Back" />
 
 </menu>
