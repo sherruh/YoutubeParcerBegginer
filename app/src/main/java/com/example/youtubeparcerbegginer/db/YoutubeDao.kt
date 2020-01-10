@@ -17,7 +17,7 @@ interface YoutubeDao {
     suspend fun getAllPlaylist():PlaylistModel
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertDetailPlaylistData(items: DetailPlaylistModel)
+    suspend fun insertDetailPlaylistData(item: DetailPlaylistModel)
 
     @Query("SELECT * FROM detail_playlist")
     suspend fun fetchDetailPlaylist(): List<DetailPlaylistModel>

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.detail_playlist.DetailPlaylistActivity"></activity>
+        <activity android:name=".ui.detail_video.DetailVideoActivity"></activity>
+        <activity android:name=".ui.detail_playlist.DetailPlaylistActivity" />
         <activity android:name=".ui.playlist.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

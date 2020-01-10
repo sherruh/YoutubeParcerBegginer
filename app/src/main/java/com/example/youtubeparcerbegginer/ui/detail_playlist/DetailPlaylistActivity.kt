@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.youtubeparcerbegginer.adapter.DetailPlaylistAdapter
 import com.example.youtubeparcerbegginer.model.DetailPlaylistModel
+import com.example.youtubeparcerbegginer.ui.detail_video.DetailVideoActivity
 import kotlinx.android.synthetic.main.activity_detail_playlist.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -52,10 +53,9 @@ class DetailPlaylistActivity : AppCompatActivity() {
         getIntentData()
         initView()
         viewModel = ViewModelProviders.of(this).get(DetailPlaylistViewModel::class.java)
-
         initAdapter()
         getDetailPlaylistData()
-        //subscribeToViewModel()//TODO check this
+
     }
 
     private fun getDetailPlaylistData() {
@@ -103,7 +103,7 @@ class DetailPlaylistActivity : AppCompatActivity() {
     private fun getIntentData() {
         id = intent?.getStringExtra("id")
         title = intent?.getStringExtra("title")
-        description = intent?.getStringExtra("description")
+        description = intent?.getStringExtra("etag")
     }
 
     private fun initAdapter() {
@@ -113,10 +113,7 @@ class DetailPlaylistActivity : AppCompatActivity() {
     }
 
     private fun click(item: ItemsItem) {
-       /* val intent = Intent(this, DetailVideoActivity::class.java)
-        intent.putExtra("playlistId", id)
-        intent.putExtra("videoId", item.snippet.resourceId.videoId)
-        startActivity(intent)*/
+        DetailVideoActivity.startActivity(id!!,item.snippet.resourceId.videoId,this)
     }
 
 
@@ -126,9 +123,13 @@ class DetailPlaylistActivity : AppCompatActivity() {
         data?.observe(this, Observer<DetailPlaylistModel> {
             if (data.value != null) {
                 updateViews(data.value!!)
-                //TODO insert to database
+                updateDatabasePlaylistData(data.value!!)
             }
         })
+    }
+
+    private fun updateDatabasePlaylistData(value: DetailPlaylistModel) {
+        viewModel.insertDetailPlaylistData(value)
     }
 
     private fun updateViews(it: DetailPlaylistModel) {

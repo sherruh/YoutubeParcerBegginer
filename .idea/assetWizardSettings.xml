@@ -165,9 +165,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff0000" />
-                            <entry key="outputName" value="ic_play_circle" />
-                            <entry key="sourceFile" value="C:\Users\shtashev\Downloads\Button.svg" />
+                            <entry key="outputName" value="ic_button_download" />
+                            <entry key="sourceFile" value="C:\Users\shtashev\Downloads\button_download.svg" />
                           </map>
                         </option>
                       </PersistentState>
