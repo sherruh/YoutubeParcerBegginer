@@ -45,29 +45,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_collapseMode="parallax"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                    <ImageView
-                        android:id="@+id/backdrop"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:scaleType="centerCrop"
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="24sp"
+                        android:layout_margin="5dp"
                         />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:text="HERE"
+                        android:id="@+id/tv_description"
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:layout_margin="5dp"
+                        android:textSize="15sp"
                         />
 
                 </LinearLayout>
 
-
-
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_height="0dp"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                     app:layout_collapseMode="pin"
                     />
@@ -79,12 +83,7 @@
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-
             </androidx.core.widget.NestedScrollView>
-
-
-
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -92,7 +91,7 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:background="@color/colorRed"
+            android:src="@drawable/ic_play_circle"
             app:layout_anchor="@id/appbar"
             app:layout_anchorGravity="bottom|right"
             app:layout_insetEdge="none"
@@ -101,12 +100,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
-            android:layout_width="match_parent"
+            android:layout_width="399dp"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            />
-
-
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

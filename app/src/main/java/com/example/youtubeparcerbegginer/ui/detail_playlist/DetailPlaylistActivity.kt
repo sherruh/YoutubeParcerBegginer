@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.youtubeparcerbegginer.adapter.DetailPlaylistAdapter
 import com.example.youtubeparcerbegginer.model.DetailPlaylistModel
 import kotlinx.android.synthetic.main.activity_detail_playlist.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.util.logging.Logger
 
 class DetailPlaylistActivity : AppCompatActivity() {
 
@@ -34,6 +38,9 @@ class DetailPlaylistActivity : AppCompatActivity() {
             intent.putExtra("title", item.snippet.title)
             intent.putExtra("channelTitle", item.snippet.channelId)
             intent.putExtra("etag", item.etag)
+            intent.putExtra("description",item.snippet.description)
+
+            com.example.youtubeparcerbegginer.utils.Logger.d(item.etag)
             context.startActivity(intent)
         }
     }
@@ -42,18 +49,49 @@ class DetailPlaylistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_playlist)
 
+        getIntentData()
         initView()
         viewModel = ViewModelProviders.of(this).get(DetailPlaylistViewModel::class.java)
 
         initAdapter()
-        getIntentData()
-        subscribeToViewModel()
+        getDetailPlaylistData()
+        //subscribeToViewModel()//TODO check this
+    }
+
+    private fun getDetailPlaylistData() {
+        CoroutineScope(Dispatchers.Main).launch {
+            val model = viewModel.getDetailPlaylistModel()
+            if (model != null && !model.isNullOrEmpty()){
+                getExtraDetailPlaylistModel(model)
+            }else{
+                subscribeToViewModel()
+            }
+
+        }
+
+    }
+
+    private fun getExtraDetailPlaylistModel(model: List<DetailPlaylistModel>) {
+        var detailPlaylistModel: DetailPlaylistModel? = null
+        for(i in 0 until model.size){
+            for(z in 0 until model[i].items!!.size){
+                if(model[i].items!![z].snippet.playlistId == id){
+                    detailPlaylistModel = model[i]
+                }
+            }
+        }
+        if(detailPlaylistModel != null) updateViews(detailPlaylistModel)
+        else subscribeToViewModel()
     }
 
     private fun initView() {
         toolBar = findViewById(R.id.toolBar_redirected)
         toolBar.title = ""
         setSupportActionBar(toolBar)
+
+        tv_title.text = title
+        tv_description.text = description
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -65,7 +103,7 @@ class DetailPlaylistActivity : AppCompatActivity() {
     private fun getIntentData() {
         id = intent?.getStringExtra("id")
         title = intent?.getStringExtra("title")
-        description = intent?.getStringExtra("etag")
+        description = intent?.getStringExtra("description")
     }
 
     private fun initAdapter() {
@@ -88,6 +126,7 @@ class DetailPlaylistActivity : AppCompatActivity() {
         data?.observe(this, Observer<DetailPlaylistModel> {
             if (data.value != null) {
                 updateViews(data.value!!)
+                //TODO insert to database
             }
         })
     }

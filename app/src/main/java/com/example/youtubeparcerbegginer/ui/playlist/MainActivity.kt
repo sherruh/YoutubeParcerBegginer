@@ -19,6 +19,8 @@ import com.example.youtubeparcerbegginer.model.ItemsItem
 import com.example.youtubeparcerbegginer.model.PlaylistModel
 import com.example.youtubeparcerbegginer.ui.detail_playlist.DetailPlaylistActivity
 import com.example.youtubeparcerbegginer.utils.Logger
+import com.example.youtubeparcerbegginer.utils.gone
+import com.example.youtubeparcerbegginer.utils.visible
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.internet_layout.*
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchPlaylists() {
         val data = viewModel?.getPlaylistData()
-        progressBar.visibility = View.VISIBLE
+        progressBar.visible()
         data?.observe(this, Observer<PlaylistModel>{
             val model: PlaylistModel? = data.value
             when {
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                     updateDataBasePlaylistModel(model)
                 }
             }
-            progressBar.visibility = View.GONE
+            progressBar.gone()
         })
     }
 
