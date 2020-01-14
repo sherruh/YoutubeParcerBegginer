@@ -8,6 +8,7 @@ import com.example.youtubeparcerbegginer.R
 import com.example.youtubeparcerbegginer.model.ItemsItem
 import android.content.Context
 import android.content.Intent
+import android.view.MenuItem
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -66,9 +67,7 @@ class DetailPlaylistActivity : AppCompatActivity() {
             }else{
                 subscribeToViewModel()
             }
-
         }
-
     }
 
     private fun getExtraDetailPlaylistModel(model: List<DetailPlaylistModel>) {
@@ -98,6 +97,13 @@ class DetailPlaylistActivity : AppCompatActivity() {
         val menuInflater = menuInflater
         menuInflater.inflate(R.menu.playlist_details_menu,menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_back -> finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun getIntentData() {

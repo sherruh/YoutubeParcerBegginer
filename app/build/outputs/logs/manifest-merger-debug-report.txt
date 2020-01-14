@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [com.google.android.material:material:1.1.0-alpha10] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\5835c5d8117d1574323c90252c6aa619\material-1.1.0-alpha10\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\0a9d4d5bc3b12234eb6fc499b5fc89d4\jetified-android-youtubeExtractor-master-SNAPSHOT\AndroidManifest.xml:2:1-18:12
 MERGED from [com.github.evgenyneu:js-evaluator-for-android:v4.0.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\78a63c6c2dd9e2eabb8c238b3f72a90f\jetified-js-evaluator-for-android-v4.0.0\AndroidManifest.xml:2:1-16:12
@@ -18,6 +18,7 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\shtashev\.gradle\cac
 MERGED from [com.google.android.exoplayer:exoplayer:2.8.4] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\cccfb8a1bb637ae18952a0f9b59e1dc9\exoplayer-2.8.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-ktx:2.2.2] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\265ab54c95b97fe50c28e5e79c2c5eb0\room-ktx-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\3da51d74ec203deb32946c02f5deb766\room-runtime-2.2.2\AndroidManifest.xml:17:1-30:12
+MERGED from [com.mindorks.android:prdownloader:0.5.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\31e9830c2112a09e2b2753af04b656cc\prdownloader-0.5.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\bc16c119e93617f7f4bd3188565e6df6\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\24dca681329175a03d53e389a45c201a\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\4681ba69b992d1066d0f86ff962fa316\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -51,20 +52,20 @@ MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\shtashev\.gradle\c
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\7034d30b19b127a19660862334887356\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\2958bfeff871706e37e023803895bb19\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\225c82d8c731985fb415caed199cb7eb\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:2:11-69
@@ -89,7 +90,7 @@ ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src
 	android:name
 		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:10:5-27:19
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:10:5-29:19
 MERGED from [com.google.android.material:material:1.1.0-alpha10] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\5835c5d8117d1574323c90252c6aa619\material-1.1.0-alpha10\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0-alpha10] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\5835c5d8117d1574323c90252c6aa619\material-1.1.0-alpha10\AndroidManifest.xml:22:5-20
 MERGED from [com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\0a9d4d5bc3b12234eb6fc499b5fc89d4\jetified-android-youtubeExtractor-master-SNAPSHOT\AndroidManifest.xml:13:5-16:19
@@ -127,27 +128,29 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\sh
 	android:name
 		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:11:9-34
 activity#com.example.youtubeparcerbegginer.ui.detail_video.DetailVideoActivity
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:18:9-82
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:18:9-20:76
+	android:configChanges
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:20:13-74
 	android:name
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:18:19-70
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:19:13-64
 activity#com.example.youtubeparcerbegginer.ui.detail_playlist.DetailPlaylistActivity
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:19:9-79
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:21:9-79
 	android:name
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:19:19-76
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:21:19-76
 activity#com.example.youtubeparcerbegginer.ui.playlist.MainActivity
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:20:9-26:20
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:20:19-59
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:22:19-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\shtashev\AndroidStudioProjects\YoutubeParcerBegginer\app\src\main\AndroidManifest.xml
@@ -180,6 +183,8 @@ MERGED from [androidx.room:room-ktx:2.2.2] C:\Users\shtashev\.gradle\caches\tran
 MERGED from [androidx.room:room-ktx:2.2.2] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\265ab54c95b97fe50c28e5e79c2c5eb0\room-ktx-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\3da51d74ec203deb32946c02f5deb766\room-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\3da51d74ec203deb32946c02f5deb766\room-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.mindorks.android:prdownloader:0.5.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\31e9830c2112a09e2b2753af04b656cc\prdownloader-0.5.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.mindorks.android:prdownloader:0.5.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\31e9830c2112a09e2b2753af04b656cc\prdownloader-0.5.0\AndroidManifest.xml:22:5-24:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\bc16c119e93617f7f4bd3188565e6df6\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\bc16c119e93617f7f4bd3188565e6df6\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\shtashev\.gradle\caches\transforms-2\files-2.1\24dca681329175a03d53e389a45c201a\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41

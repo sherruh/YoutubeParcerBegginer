@@ -70,4 +70,6 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.2"
     androidTestImplementation "androidx.room:room-testing:2.2.2"
 
+    implementation 'com.mindorks.android:prdownloader:0.5.0'
+
 }

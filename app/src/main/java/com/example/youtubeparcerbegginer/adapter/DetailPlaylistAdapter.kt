@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubeparcerbegginer.R
 import com.example.youtubeparcerbegginer.model.ItemsItem
+import com.example.youtubeparcerbegginer.utils.loadImage
 import com.squareup.picasso.Picasso
 
 /**
@@ -21,7 +22,7 @@ class DetailPlaylistAdapter(val function: (ItemsItem) -> Unit) : RecyclerView.Ad
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): YouTubeViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_youtube_playlist, parent, false)
+            .inflate(R.layout.item_youtube_video, parent, false)
         return YouTubeViewHolder(
             view,
             function
@@ -55,12 +56,7 @@ class DetailPlaylistAdapter(val function: (ItemsItem) -> Unit) : RecyclerView.Ad
         }
 
         fun bind(item: ItemsItem) {
-            Picasso
-                .get()
-                .load(item.snippet?.thumbnails?.default?.url)
-                .fit()
-                .centerCrop()
-                .into(image)
+            image!!.loadImage(item.snippet?.thumbnails?.default?.url)
             title?.text = item.snippet.title
             description?.text = item.contentDetails?.itemCount
             itemView.setOnClickListener {

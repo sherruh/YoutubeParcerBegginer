@@ -45,7 +45,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_collapseMode="parallax"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/colorGrey"
+                    >
 
                     <TextView
                         android:id="@+id/tv_title"
@@ -53,8 +55,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorTitle"
                         android:textSize="24sp"
-                        android:layout_margin="2dp"
-                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
                         />
 
                     <TextView
@@ -62,9 +63,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorText"
-                        android:layout_margin="2dp"
+                        android:layout_margin="4dp"
                         android:textSize="15sp"
-                        android:layout_gravity="center"
                         />
 
                 </LinearLayout>

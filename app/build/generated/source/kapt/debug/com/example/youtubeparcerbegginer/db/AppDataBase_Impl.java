@@ -27,19 +27,21 @@ public final class AppDataBase_Impl extends AppDataBase {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `play_list` (`kind` TEXT NOT NULL, `pageInfo` TEXT NOT NULL, `etag` TEXT NOT NULL, `items` TEXT NOT NULL, PRIMARY KEY(`etag`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `detail_playlist` (`kind` TEXT NOT NULL, `pageInfo` TEXT NOT NULL, `etag` TEXT NOT NULL, `items` TEXT NOT NULL, PRIMARY KEY(`kind`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `video_model` (`kind` TEXT NOT NULL, `pageInfo` TEXT NOT NULL, `etag` TEXT NOT NULL, `items` TEXT, PRIMARY KEY(`kind`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ad504d1a3a143b0aa13afc5d73a3c035')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7e9171a9f8e24476b4cbd7a694ed33e7')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `play_list`");
         _db.execSQL("DROP TABLE IF EXISTS `detail_playlist`");
+        _db.execSQL("DROP TABLE IF EXISTS `video_model`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -106,9 +108,23 @@ public final class AppDataBase_Impl extends AppDataBase {
                   + " Expected:\n" + _infoDetailPlaylist + "\n"
                   + " Found:\n" + _existingDetailPlaylist);
         }
+        final HashMap<String, TableInfo.Column> _columnsVideoModel = new HashMap<String, TableInfo.Column>(4);
+        _columnsVideoModel.put("kind", new TableInfo.Column("kind", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsVideoModel.put("pageInfo", new TableInfo.Column("pageInfo", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsVideoModel.put("etag", new TableInfo.Column("etag", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsVideoModel.put("items", new TableInfo.Column("items", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysVideoModel = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesVideoModel = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoVideoModel = new TableInfo("video_model", _columnsVideoModel, _foreignKeysVideoModel, _indicesVideoModel);
+        final TableInfo _existingVideoModel = TableInfo.read(_db, "video_model");
+        if (! _infoVideoModel.equals(_existingVideoModel)) {
+          return new RoomOpenHelper.ValidationResult(false, "video_model(com.example.youtubeparcerbegginer.model.DetailVideoModel).\n"
+                  + " Expected:\n" + _infoVideoModel + "\n"
+                  + " Found:\n" + _existingVideoModel);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "ad504d1a3a143b0aa13afc5d73a3c035", "9743622a970a310a9a0029daaafb1f88");
+    }, "7e9171a9f8e24476b4cbd7a694ed33e7", "e2871c539a0ea7c5295f9de7cc7fed84");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -121,7 +137,7 @@ public final class AppDataBase_Impl extends AppDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "play_list","detail_playlist");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "play_list","detail_playlist","video_model");
   }
 
   @Override
@@ -132,6 +148,7 @@ public final class AppDataBase_Impl extends AppDataBase {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `play_list`");
       _db.execSQL("DELETE FROM `detail_playlist`");
+      _db.execSQL("DELETE FROM `video_model`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
